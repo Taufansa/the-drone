@@ -16,6 +16,12 @@ run test the project...
 mvn test
 ```
 
+build the project...
+
+```sh
+mvn clean install / mvn installs
+```
+
 access the-drone database
 
 ```sh
