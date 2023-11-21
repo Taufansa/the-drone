@@ -19,7 +19,7 @@ mvn test
 build the project...
 
 ```sh
-mvn clean install / mvn installs
+mvn clean install / mvn install
 ```
 
 access the-drone database
