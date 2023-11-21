@@ -11,11 +11,9 @@ import org.mockito.InjectMocks;
 import org.mockito.Mockito;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpStatus;
-
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
-
 import static org.mockito.Mockito.when;
 
 @SpringBootTest
@@ -30,7 +28,7 @@ public class DroneServiceTest extends BaseServiceTest {
         var serialNumber = UUID.randomUUID().toString();
 
         var drone = Drone.builder()
-                .droneId(1)
+                .id(1)
                 .name("Drone Test 1")
                 .model(Constant.DroneModel.Middleweight.toString())
                 .battery(100)
@@ -64,7 +62,7 @@ public class DroneServiceTest extends BaseServiceTest {
         var serialNumber = UUID.randomUUID().toString();
 
         var drone = Drone.builder()
-                .droneId(1)
+                .id(1)
                 .name("Drone Test 1")
                 .model(Constant.DroneModel.Middleweight.toString())
                 .battery(100)
@@ -100,7 +98,7 @@ public class DroneServiceTest extends BaseServiceTest {
         var serialNumber = UUID.randomUUID().toString() + UUID.randomUUID().toString() + UUID.randomUUID().toString() + UUID.randomUUID().toString();
 
         var drone = Drone.builder()
-                .droneId(1)
+                .id(1)
                 .name("Drone Test 1")
                 .model(Constant.DroneModel.Middleweight.toString())
                 .battery(100)
@@ -135,7 +133,7 @@ public class DroneServiceTest extends BaseServiceTest {
         var droneid = 1;
 
         var drone = Drone.builder()
-                .droneId(droneid)
+                .id(droneid)
                 .name("Drone Test 1")
                 .model(Constant.DroneModel.Middleweight.toString())
                 .battery(100)
@@ -163,7 +161,7 @@ public class DroneServiceTest extends BaseServiceTest {
         var droneid = 1;
 
         var drone = Drone.builder()
-                .droneId(droneid)
+                .id(droneid)
                 .name("Drone Test 1")
                 .model(Constant.DroneModel.Middleweight.toString())
                 .battery(100)
@@ -188,7 +186,7 @@ public class DroneServiceTest extends BaseServiceTest {
     @Test
     public void testFetchAllDroneByStateAndSuccess() {
         var drone1 = Drone.builder()
-                .droneId(1)
+                .id(1)
                 .name("Drone Test 1")
                 .model(Constant.DroneModel.Middleweight.toString())
                 .battery(100)
@@ -197,7 +195,7 @@ public class DroneServiceTest extends BaseServiceTest {
                 .build();
 
         var drone2 = Drone.builder()
-                .droneId(2)
+                .id(2)
                 .name("Drone Test 2")
                 .model(Constant.DroneModel.Cruiserweight.toString())
                 .battery(100)
@@ -222,7 +220,7 @@ public class DroneServiceTest extends BaseServiceTest {
     @Test
     public void testFetchAllDroneByStateAndSuccessButReturnNoData() {
         var drone1 = Drone.builder()
-                .droneId(1)
+                .id(1)
                 .name("Drone Test 1")
                 .model(Constant.DroneModel.Middleweight.toString())
                 .battery(100)
@@ -231,7 +229,7 @@ public class DroneServiceTest extends BaseServiceTest {
                 .build();
 
         var drone2 = Drone.builder()
-                .droneId(2)
+                .id(2)
                 .name("Drone Test 2")
                 .model(Constant.DroneModel.Cruiserweight.toString())
                 .battery(100)

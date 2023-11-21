@@ -21,7 +21,7 @@ public class Medication {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer medicationId;
+    private Integer id;
     private Integer weight;
     private String code;
     private String name;

@@ -92,7 +92,7 @@ public class DeliveryService extends BaseService {
                         DeliveryItem.builder()
                                 .quantity(x.getQuantity())
                                 .medication(medications.stream().filter(
-                                        y -> y.getMedicationId().equals(x.getMedicationId())
+                                        y -> y.getId().equals(x.getMedicationId())
                                     ).findFirst().get())
                                 .build()
                 );

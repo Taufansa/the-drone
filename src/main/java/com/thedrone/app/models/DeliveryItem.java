@@ -20,7 +20,7 @@ public class DeliveryItem {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer deliveryItemId;
+    private Integer id;
 
     private Integer quantity;
 

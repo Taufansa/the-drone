@@ -20,7 +20,7 @@ public class Drone {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer droneId;
+    private Integer id;
 
     @Column(length = 100, unique = true)
     private String serialNumber;

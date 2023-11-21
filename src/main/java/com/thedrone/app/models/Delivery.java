@@ -21,7 +21,7 @@ public class Delivery {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer deliveryId;
+    private Integer id;
 
     private Integer totalWeight;
 

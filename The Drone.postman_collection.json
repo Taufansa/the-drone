@@ -1,0 +1,165 @@
+{
+	"info": {
+		"_postman_id": "1bc3d725-7a41-422e-be98-7daf92e9dac8",
+		"name": "The Drone",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12138642",
+		"_collection_link": "https://winter-meadow-362791.postman.co/workspace/Rancang-Uangku-API~8850c973-53a4-4528-ac9f-f7b278543796/collection/12138642-1bc3d725-7a41-422e-be98-7daf92e9dac8?action=share&creator=12138642&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Save Drone",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"serialNumber\" : \"1a9a6c2e-9eb8-4081-9c41-39e175ddc681\",\n    \"model\" : \"Middleweight\",\n    \"name\" : \"Drone Test 1\",\n    \"weightCapability\" : 700\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8282/api/v1/drone/save",
+					"host": [
+						"localhost"
+					],
+					"port": "8282",
+					"path": [
+						"api",
+						"v1",
+						"drone",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch Drone by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8282/api/v1/drone/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8282",
+					"path": [
+						"api",
+						"v1",
+						"drone",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch Available Drones",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8282/api/v1/drone/available",
+					"host": [
+						"localhost"
+					],
+					"port": "8282",
+					"path": [
+						"api",
+						"v1",
+						"drone",
+						"available"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Medication",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"weight\" : 100,\n    \"code\" : \"SKUY_01\",\n    \"name\" : \"Obat Skuy_0-1\",\n    \"image\" : \"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5M0VY2BCA9aYVp0vVvkjHEaIHthDzZEWsfg&usqp=CAU\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8282/api/v1/medication/save",
+					"host": [
+						"localhost"
+					],
+					"port": "8282",
+					"path": [
+						"api",
+						"v1",
+						"medication",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch Delivery by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8282/api/v1/delivery/items/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8282",
+					"path": [
+						"api",
+						"v1",
+						"delivery",
+						"items",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Delivery",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"droneId\" : 3,\n    \"deliveryItemRequests\" : [\n        {\n            \"medicationId\" : 1,\n            \"quantity\" : 1\n        },\n        {\n            \"medicationId\" : 2,\n            \"quantity\" : 1\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8282/api/v1/delivery/save",
+					"host": [
+						"localhost"
+					],
+					"port": "8282",
+					"path": [
+						"api",
+						"v1",
+						"delivery",
+						"save"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

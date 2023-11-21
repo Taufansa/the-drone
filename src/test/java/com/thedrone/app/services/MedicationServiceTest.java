@@ -10,7 +10,6 @@ import org.mockito.InjectMocks;
 import org.mockito.Mockito;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpStatus;
-
 import static org.mockito.Mockito.when;
 
 @SpringBootTest
